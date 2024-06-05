@@ -2,6 +2,8 @@ package com.datamart.Datamart.Models;
 
 import jakarta.persistence.*;
 
+import java.time.ZonedDateTime;
+
 @Entity
 @Table(name = "datamart")
 public class DatamartModel {
@@ -17,4 +19,7 @@ public class DatamartModel {
     @OneToOne
     @JoinColumn(name = "idresponse")
     private ResponseModel response;
+
+    @Column(name = "createddate")
+    private ZonedDateTime createdDate;
 }
